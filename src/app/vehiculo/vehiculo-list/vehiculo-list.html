@@ -1,1 +1,23 @@
-<p>vehiculo-list works!</p>
+<div class="container">
+  <h2 class="mt-4 mb-4">Lista de Vehículos</h2>
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Marca</th>
+        <th>Línea</th>
+        <th>Modelo</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (vehiculo of vehiculos; track vehiculo.id; let i = $index) {
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ vehiculo.marca }}</td>
+          <td>{{ vehiculo.linea }}</td>
+          <td>{{ vehiculo.modelo }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
